@@ -1,0 +1,271 @@
+Sintaxe Básica do JS
+
+*Operadores
+	+ Soma
+	- Subtração
+	* Multiplicação
+	/ Divisão
+	% - Resto da Divisão
+	
+*Variáveis
+
+Para armazenarmos um valor para uso posterior, podemos criar uma variável:
+	var resultado = 102 / 17;
+O resultado de criar uma variável é sempre undefined. Para obter o valor que
+guardamos nela ou mudar o seu valor, podemos fazer o seguinte:
+	resultado
+	
+	resultado = resultado + 10
+	
+Também podemos alterar o valor de uma variável usando as operações básicas
+com uma sintaxe bem compacta:
+	var idade = 10; //undefined
+	idade += 10; //idade vale 20
+	idade -= 5; //idade vale 15
+	idade /= 3; //idade vale 5
+	idade *= 10; //idade vale 50
+
+*Number
+	
+Com esse tipo de dados é possível executar todas as operações que vimos
+anteriormente:
+	var pi = 3.14159;
+	var raio = 20;
+	var perimetro = 2 * pi * raio;
+	
+*String
+
+Não são apenas números que podemos salvar numa variável. O JavaScript tem 
+vários tipos de dados. Uma string em JavaScript é utilizada para armazenar
+trechos de texto:
+	var empresa = "Caelum";
+Para exibirmos o valor da variável empresa fora do console, podemos executar
+o seguinte comando:
+	alert(empresa);
+O comando alert serve para criação de popups com algum conteúdo de texto que
+colocarmos dentro dos parênteses.
+
+*Automatic semicolon insertion(ASI)
+
+É possível omitir o ponto e vírgula no final de cada declaração. A omissão
+de ponto e vírgula funciona no JavaScript devido ao mecanismo chamado 
+automatic semicolon insertion (ASI).
+
+*A tag SCRIPT
+
+Para inserirmos um código JavaScript em uma página, é necessário utilizar a
+tag <script>:
+	<script>
+		alert("Olá, Mundo!");
+	</script>
+A tag <script> pode ser declarada dentro da tag <head> assim como na tag 
+<body>, mas devemos ficar atentos, porque o código é lido imediatamente 
+dentro do navegador.
+Contudo, quando declaramos o <script> dentro da tag <head>, ele trava o
+processamento da página. E se for necessário algum tipo de interação com
+o usuário, a página só será carregada depois da interação. Para resolver
+isso, basta removermos o script do <head>, colocando-o no final do <body>.
+Devemos sempre colocar o script antes de fecharmos a tag </body>? Na 
+maioria esmagadora das vezes sim.
+
+*JavaScript em arquivo externo
+
+Se o mesmo script for utilizado em outra página, como fazemos? Imagine ter
+que reescrever o script toda vez que ele for necessário. Para não acontecer
+isso, é possível importar scripts dentro da página utilizando a tag <script>
+	<script type="text/javascript" src="js/hello.js"></script>
+Com a separação do script em arquivo externo é possível reaproveitar alguma
+funcionalidade em mais de uma página.
+
+*Mensagens no Console
+
+O console do navegador pode ser utilizado no lugar do alert para imprimir 
+uma mensagem ou o valor de uma variável:
+	var mensagem = "Olá mundo";
+	console.log(mensagem);
+	
+*Impressão de Variáveis diretamente no console
+
+Quando você estiver com o console aberto, não é necessário chamar o
+console.log(nomeDaVariavel): você pode chamar o nome da variável 
+diretamente que ela será impressa no console.
+
+*DOM: sua página no mundo JavaScript
+
+Para permitir alterações na página, ao carregar o HTML da página, os
+navegadores carregam em memória uma estrutura de dados que representa cada
+uma de nossas tags no JavaScript. Essa estrutura é chamada de DOM 
+(Document Object Model). Essa estrutura pode ser acessada através da 
+variável global document.
+O termo "documento" é frequentemente utilizado em referências à nossa 
+página. No mundo front-end, documento e página são sinônimos.
+
+*QuerySelector
+
+Antes de sair alterando nossa página, precisamos em primeiro lugar acessar 
+no JavaScript o elemento que queremos alterar.
+	document.querySelector("h1")
+
+Esse comando usa os seletores CSS para encontrar os elementos na página.
+Usamos um seletor de nome de tag mas poderíamos ter usado outros:
+	document.querySelector(".class")
+	document.querySelector("#id")
+
+*Elemento da página como variável
+
+Se você vai utilizar várias vezes um mesmo elemento da página, é possível
+salvar o resultado de qualquer querySelector numa variável:
+	var titulo = document.querySelector("h1")
+Executando no console, você vai perceber que o elemento correspondente é
+selecionado. Podemos então manipular seu conteúdo. Você pode ver o conteúdo
+textual dele com:
+	titulo.textContent
+Essa propriedade, inclusive, pode receber valores e ser alterada:
+	titulo.textContent = "Novo título"
+	
+*QuerySelectorAll
+
+Às vezes você precisa selecionar vários elementos na página. Várias tags 
+com a classe .cartao por exemplo. Se o retorno esperado é mais de um 
+elemento, usamos querySelectorAll que devolve uma lista de elementos (array)
+	document.querySelectorAll(".cartao")
+Podemos então acessar elementos nessa lista através da posição dele 
+(começando em zero) e usando os colchetes.
+	document.querySelectorAll(".cartao")[0]
+	
+*Alterações no DOM
+
+Ao alterarmos os elementos da página, o navegador sincroniza as mudanças
+e alteram a aplicação em tempo real.
+
+*Funções e os eventos do DOM
+
+Apesar de ser interessante a possibilidade de alterar o documento todo por
+meio do JavaScript, é muito comum que as alterações sejam feitas quando o
+usuário executa alguma ação, como por exemplo, mudar o conteúdo de um 
+botão ao clicar nele e não quando a página carrega. Porém, por padrão,
+qualquer código colocado no <script>, como fizemos anteriormente, é 
+executado assim que o navegador lê ele.
+Para guardarmos um código para ser executado em algum outro momento, por
+exemplo, quando o usuário clicar num botão, é necessário utilizar alguns
+recursos do JavaScript no navegador. Primeiro vamos criar uma função:
+	function mostraAlerta() {
+		alert("Funciona!")
+	}
+
+Ao criarmos uma função, simplesmente guardamos o que estiver dentro da 
+função, e esse código guardado só será executado quando chamarmos a função,
+como no seguinte exemplo:
+	mostraAlerta() //fazendo uma chamada para a função mostraAlerta
+Para chamar a função mostraAlerta só precisamos utilizar o nome da função
+e logo depois abrir e fechar parênteses.
+
+Agora, para que essa função seja chamada quando o usuário clicar o botão da
+nossa página, precisamos do seguinte código:
+	var botao = document.querySelector("#botaoEnviar");
+	
+	botao.onclick = mostraAlerta;
+	
+Note que primeiramente foi necessário selecionar o botão e depois definir 
+no onclick que o que vai ser executado é a função mostraAlerta. Essa 
+receita será sempre a mesma para qualquer código que tenha que ser 
+executado após alguma ação do usuário em algum elemento. O que mudará sempre
+é qual elemento você está selecionando, a qual evento você está reagindo
+e qual função será executada.
+
+*Quais eventos existem
+
+Existem diversos eventos que podem ser utilizados em diversos elementos para
+que a interação do usuário dispare alguma função:
+	*oninput: quando um elemento input tem seu valor modificado
+	*onclick: quando ocorre um click com o mouse
+	*ondblclick: quando ocorre dois clicks com o mouse
+	*onmousemove: quando mexe o mouse
+	*onmousedown: quando aperta o botão do mouse
+	*onmouseup: quando solta o botão do mouse
+	*onkeypress: quando pressionar e soltar uma tecla
+	*onkeydown: quando pressionar uma tecla
+	*onkeyup: quando soltar uma tecla
+	*onblur: quando um elemento perde foco
+	*onfocus: quando um elemento ganha foco
+	*onchange: quando um input, select ou textarea tem seu valor alterado
+	*onload: quando a página é carregada
+	*onunload: quando a página é fechada
+	*onsubmit: disparada antes de submeter o formulário (útil para realizar
+	validações)
+
+Existem também uma série de outros eventos mais avançados que permitem a 
+criação de interações para drag-and-drop, e até mesmo a criação de eventos
+customizados.
+
+*Funções Anônimas
+
+É muito comum que algumas funções tenham uma única referência no código.
+Nesses casos, o JavaScript permite que criemos a função no lugar onde antes
+estávamos indicando seu nome.
+	inputTamanho.oninput = function() {
+		outputTamanho.value = inputTamanho.value
+	}
+Transformamos a função mostraTamanho em uma função sem nome, uma função 
+anônima. Ela continua sendo executada normalmente quando o usuário alterar
+o valor para o tamanho.
+
+*Manipulando Strings
+
+Uma variável que armazena uma string faz muito mais que isso! Ela permite,
+por exemplo, consultar o seu tamanho e realizar transformações em seu valor.
+	var empresa = "Caelum";
+	empresa.length; //tamanho da string
+	empresa.replace("lum", "tano"); //retorna Caetano
+	
+String é imutável. Logo, no exemplo abaixo, se a variável empresa for 
+impressa após a chamada da função replace, o valor continuará sendo "Caelum".
+Para obter uma string modificada, é necessário receber o retorno de cada
+função que manipula a string, pois uma nova string modificada é retornada.
+	var empresa = "Caelum";
+	
+	empresa.replace("lum", "tano");
+	console.log(empresa); //imprime Caelum
+	empresa = empresa.replace("lum", "tano");
+	console.log(empresa); //imprime Caetano
+
+*Conversões
+
+O JavaScript possui funções de conversão de string para number:
+	var textoInteiro = "10";
+	var inteiro = parseInt(textoInteiro);
+	
+	var textoFloat = "10.22";
+	var float = parseFloat(textoFloat);
+
+*Manipulando números
+
+Number, assim como string, também é imutável. O exemplo abaixo altera o
+número de casas decimais com a função toFixed. Essa função retorna uma
+string, mas, para ela funcionar corretamente, seu retorno precisa ser
+capturado:
+	var milNumber = 1000;
+	var milString = milNumber.toFixed(2);
+	console.log(milString); //imprime a string "1000.00"
+	
+*Concatenações
+	
+É possível concatenar (juntar) tipos diferentes e o JavaScript se 
+encarregará de realizar a conversão entre os tipos, podendo resultar
+em algo não esperado.
+	var s1 = "Caelum";
+	var s2 = "Inovação";
+	console.log(s1 + s2); //imprime CaelumInovação
+
+NaN
+
+O resultado NaN (not a number) significa que todas as operações matemáticas,
+exceto a subtração, que serão vistas mais a frente, só podem ser feitas
+com números. O valor NaN ainda possui uma peculiaridade, definida em sua
+especificação:
+	var resultado = 10-"curso"; //retorna NaN
+	resultado == NaN; //false
+	NaN == NaN; /false
+Não é possível comparar uma variável com NaN, nem mesmo NaN com NaN! Para
+saber se uma variável é NaN, deve ser usada a função isNaN:
+	isNaN(resultado); //true

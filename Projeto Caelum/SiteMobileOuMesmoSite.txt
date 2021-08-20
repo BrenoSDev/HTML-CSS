@@ -1,0 +1,38 @@
+Site mobile ou mesmo site
+
+Vários sites adotam a estratégia de ter um site diferente
+voltado para dispositivos móveis usando um subdomínio diferente
+como "m." ou "mobile."
+Essa abordagem traz maior facilidade na hora de pensar nas 
+capacidades de cada plataforma, Desktop e mobile, permitindo
+que entreguemos uma experiência customizada e otimizada 
+para cada situação. Porém, há diversos problemas como:
+*Como atender adequadamente diversos dispositivos como
+tablets, smartphones, smartTvs
+*Dar manutenção em um site já é trabalhoso, imagine em dois
+
+
+Uma abordagem que costuma ser muito utilizada é a de ter um
+único site, acessível em todos os dispositivos móveis.
+Certamente, a ideia não é fazer o usuário móvel acessar a
+página exatamente da mesma maneira que o usuário Desktop.
+Usando truques de CSS3 bem suportados no mercado, podemos
+usar a mesma base de layout e marcação porém ajustando o
+design para cada tipo de dispositivo.
+
+Como	desenvolver	um	site	exclusivo	para	Mobile?
+
+Do	ponto	de	vista	de	código,	é	a	abordagem	mais
+simples:	basta	fazer	sua	página	com	design mais
+enxuto	e	levando	em	conta	que	a	tela	será pequena
+(em	geral,	usa-se	width	de	100%	para	que se	
+adapte	à	pequenas	variações	de	tamanhos	de	telas
+entre	smartphones	diferentes). Uma	 dificuldade estará
+no	 servidor	 para	 detectar	 se	 o	 usuário está
+vindo	 de	 um	 dispositivo móvel	ou	não,	e	
+redirecioná-lo	para	o	lugar	certo.	Isso costuma
+envolver	código	no	servidor	que detecte	o navegador
+do	usuário	usando	o	User-Agent	do	navegador. É uma
+boa	 prática	 também	 incluir	 um	 link	 para	 a
+versão	 normal	 do	 site	 caso	 o	 usuário	 não
+queira	a	versão	móvel.

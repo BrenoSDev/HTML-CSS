@@ -1,0 +1,56 @@
+História do JavaScript
+
+No início da Internet as páginas eram pouco ou nada interativas, eram 
+documentos que apresentavam seu conteúdo exatamente como foram criados para
+serem exibidos no navegador. Existiam algumas tecnologias para a geração de
+páginas no lado do servidor, mas havia limitações no que diz respeito a como
+o usuário consumia aquele conteúdo. Navegar através de links e enviar 
+informações através de formulários era basicamente tudo o que se podia fazer.
+
+Visando o potencial da Internet para o público geral e a necessidade de 
+haver uma interação maior do usuário com as páginas, a Netscape, criadora
+do navegador mais popular do início dos anos 90, de mesmo nome, criou o 
+Livescript, uma linguagem simples que permitia a execução de scripts 
+contidos nas páginas dentro do próprio navegador.
+Aproveitando o iminente sucesso do Java, que vinha conquistando cada vez
+mais espaço no mercado de desenvolvimento de aplicações corporativas, a
+Netscape logo rebatizou o Livescript como JavaScript num acordo com a 
+Sun para alavancar o uso das duas. A então vice-líder dos navegadores,
+Microsoft, adicionou ao Internet Explorer o suporte a scripts escritos 
+em VBScript e criou sua própria versão de JavaScript, o JScript.
+JavaScript é a linguagem de programação mais popular no desenvolvimento
+Web. Suportada por todos os navegadores, a linguagem é responsável por
+praticamente qualquer tipo de dinamismo que queiramos em nossas páginas.
+
+*Características da Linguagem
+
+O JavaScript, como o próprio nome sugere, é uma linguagem de scripting. 
+Uma linguagem de scripting é comumente definida como uma linguagem de
+programação que permite ao programador controlar uma ou mais aplicações 
+de terceiros. No caso do JavaScript, podemos controlar alguns comportamentos
+dos navegadores através de trechos de código que são enviados na página
+HTML.
+Outra característica comum nas linguagens de scripting é que normalmente
+elas são linguagens interpretadas, ou seja, não dependem de compilação 
+para serem executadas. Essa característica é presente no JavaScript: o
+código é interpretado e executado conforme é lido pelo navegador, linha
+a linha, assim como o HTML.
+O JavaScript também possui grande tolerância a erros, uma vez que conversões
+automáticas são realizadas durante operações. Contudo, nem sempre essas 
+conversões resultam em algo esperado, o que pode ser fonte de muitos bugs,
+caso não conheçamos bem esse mecanismo.
+O script do programador é enviado com o HTML para o navegador, mas como o
+navegador saberá diferenciar o script de um código html? Para que essa 
+diferenciação seja possível, é necessário envolver o script dentro da
+tag <script>.
+
+*Console do Navegador
+
+Existem várias formas de executar códigos JavaScript em uma página. Uma
+delas é executar códigos no que chamamos de Console. A maioria dos 
+navegadores desktop já vem com essa ferramenta instalada. No Chrome, por 
+exemplo, é possível chegar ao Console apertando F12 e em seguida acessar
+a aba "Console" ou por meio do atalho de teclado Control + Shift + i.
+O console faz parte de uma série de ferramentas embutidas nos navegadores
+especificamente para nós que estamos desenvolvendo um site. Essa série de 
+ferramentas é o que chamamos de Developer Tools.

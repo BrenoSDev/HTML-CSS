@@ -1,0 +1,51 @@
+/*A cascata do CSS significa justamente a possibilidade de elementos filhos
+herdarem características de estilização de elementos superiores, estas 
+definidas por suas propriedades, que podem ou não passar aos seus descendentes 
+seus valores */
+
+p {
+	font-family: 'Helvetica', sans-serif;
+}
+
+a {
+	font-family: 'Helvetica', sans-serif;
+}
+
+figcaption {
+	font-family: 'Helvetica', sans-serif;
+}
+
+/*Ao invés de colocar essa propriedade em cada um dos elementos textuais
+da nossa página, podemos colocar no elemento superior a estas tags, neste
+caso é o elemento <body> */
+body {
+	font-family: 'Helvetica', sans-serif;
+}
+/* Herança acontece quando elementos herdam propriedades dos elementos
+acima deles (elementos-pai) */
+
+div {
+	border: 2px solid;
+	border-color: red;
+	width: 30px;
+	height: 30px;
+}
+
+/*Queremos que a imagem preencha todo o espaço da <div>, mas as propriedades
+width e height não são aplicadas em cascata, sendo assim, somos obrigados
+a definir o tamanho da imagem manualmente */
+img {
+	width: 30px;
+	height: 30px;
+}
+
+/*Esta não é uma solução sustentável, porque, caso alterarmos o tamanho
+da <div>, teremos que lembrar de alterar também o tamanho da imagem.
+Uma forma de resolver este problema é utilizando o valor inherit para
+as propriedades width e height da imagem */
+img {
+	width: inherit;
+	height: inherit;
+}
+/*O valor inherit indica para o elemento filho que ele deve utilizar
+o mesmo valor presente no elemento pai */

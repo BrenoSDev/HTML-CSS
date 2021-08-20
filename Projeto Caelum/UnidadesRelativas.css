@@ -1,0 +1,31 @@
+div {
+	width: 400px;
+}
+/*Se queremos que a imagem ocupe todo o espaço da <div> podemos usar a 
+unidade relativa % */
+
+img {
+	width: 100%;
+}
+
+/*EM E REM têm o mesmo conceito de % mas ao invés de serem baseadas no 
+tamanho de um elemento, essas medidas são baseadas em tamanho de fonte.
+EM usa o tamanho da fonte do elemento pai e REM usa o tamanho da fonte
+do <html> */
+
+html {
+	font-size: 10px;
+}
+div {
+	font-size: 20px;
+}
+img {
+	width: 10em; /*A largura será de 200px */
+	height: 10rem; /*A altura será de 100px */
+}
+/*A vantagem de usar essas medidas é que se tivermos outros elementos
+usando essas medidas e precisarmos mudar o tamanho de todos os elementos
+proporcionalmente, basta mudarmos em um lugar só. Estas unidades de 
+medida são ideais para quando o site precisa ser exibido em diferentes
+tamanhos de telas, onde em cada tamanho de tela a fonte deve ser exibida
+em escalas de tamanhos diferentes e proporcionais entre si */

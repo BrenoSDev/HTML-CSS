@@ -1,0 +1,73 @@
+Progressive Enhacement
+
+Condições, opções, limitações e restrições
+
+*Tamanho de tela
+	Pessoas podem acessar nosso site de diversos dispositivos com tamanho
+	de telas diferentes
+*Ausência de mouse e teclado
+	Nem todos os dispositivos do mundo suportam um mouse e um teclado
+*Pointer menos preciso: touchscreen
+	Geralmente na ausência de um mouse, o toque se torna o ponteiro do
+	dispositivo
+*Navegadores diferentes e navegadores em versões diferentes
+	Navegadores desatualizados suportam menos tecnologias que navegadores
+	mais novos, e diferentes navegadores mostram páginas de maneiras 
+	diferentes
+*Tipos de conexões
+	3G da TIM no túnel/metrô e TIM Fibra no Escritório da firma a 1GB/s
+	tem velocidades bem diferentes que impactam como a página pode ser
+	mostrada
+*Pessoas com deficiências
+*Pessoas usando o site em situações diferentes
+
+Se não pensarmos e testarmos em dispositivos e casos de uso e condições 
+diferentes ou com limitações e restrições há grande chances de que nosso
+site só fique utilizável para quem se enquadre no perfil testado.
+
+Devemos pensar e testar primeiro na base que é igual/mínima para todas
+as pessoas e depois "melhorar"/adicionar código para situações onde
+caibam essas melhorias. Uma ordem de desenvolvimento, o porquê de cada
+passo e como testar:
+1. Conteúdo. É o que todas as pessoas querem ver num site e começamos por
+ele.
+2. Qual tipo de conteúdo a página vai ter? Como o conteúdo vai ser agrupado?
+Onde vai cada conteúdo? Qual a quantidade de conteúdo em cada lugar?
+3.Teste: revisão de conteúdo, ortografia e etc.
+4. Semântica com HTML. É uma melhoria em cima do conteúdo sem nenhuma 
+marcação
+5. Como se localizar entre 1000 linhas de conteúdo para marcar e dar 
+manutenção nesse conteúdo?
+6. Teste: a tag escolhida melhora a localização do código e a legibilidade
+para quem está desenvolvendo?
+7. Como usar o site sem acesso ao visual dele? Muitas pessoas dependem 
+só do conteúdo para navegar no site. Essas pessoas usam leitores de tela
+que interpretam a página e deixam ela acessível e navegável de uma 
+maneira similar à forma que quem desenvolve o código se localiza no código
+(pelas tags). 
+8. Teste: definir casos de uso, abir e usar o site de acordo em um leitor de
+tela (Dev Tools di Firefox)
+9. Outro teste: programas que exibem a árvore de acessibilidade
+10. CSS. Estilos farão o conteúdo ser exibido de uma maneira melhor. O
+foco ainda é o conteúdo, então estilos são o terceiro passo, uma melhoria
+11. Um estilo deve melhorar e manter o conteúdo sempre acessível em qualquer
+situação
+12. Recomendamos começar limitando a largura e/ou altura do viewport. Isso
+incentivará que o CSS não impeça o acesso ao conteúdo em telas menores
+e o conteúdo que está numa tela menor acaba sendo acessível em telas 
+maiores, diversas versões de navegadores.
+13. CSS sem limitação de tamanhos já é super responsivo!
+
+
+*Tags novas são melhoria e em navegadores desatualizados viram <div>. O 
+conteúdo não vai deixar de ser exibido.
+*Propriedades e valores novos do CSS em navegadores desatualizados são 
+desconsiderados e a tag segue em frente sendo exibida na página.
+*O site não vai parar de funcionar. Coisas antigas não deixam de existir
+ou de funcionar. A W3C usa o Progressive Enhancement para atualizar o
+HTML, o CSS e outros padrões a cada nova versão. Novas versões geralmente
+não mudam o que havia antes, melhoram.
+*WCAG: tamanho de fontes, contraste, legibilidade, etc.
+
+*Desenvolver com device-mode aberto no mobile. Telas menores primeiro:
+mobile-first

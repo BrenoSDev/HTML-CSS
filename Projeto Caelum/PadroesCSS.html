@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="PadroesCSS.css">
+	</head>
+	<body>
+		<!--O padrão BEM usa um conceito de bloco__elemento--modificador
+		para nomear suas classes, sendo que bloco é o elemento html que 
+		representa uma divisão de conteúdo cuja sua existência já tenha
+		um sentido por si só, elemento representa uma parte semântica
+		do bloco e modificador é uma sinalização de comportamento ou 
+		estilização -->
+		<section class="produtos produtos--mais--vendidos">
+			<h2 class="produtos__titulo">Produtos mais vendidos</h2>
+			<ul class="produtos__lista">
+				<li class="produtos__produto">
+					<figure>
+						<img src="img/produto1.png" alt="Foto do Produto 1">
+						<figcaption>Foto do produto 1</figcaption>
+					</figure>
+				</li>
+				<li class="produtos__produto produtos__produto--destaque">
+					<figure>
+						<img src="img/produto-destaque.png" alt="Foto do Produto
+						em Destaque">
+						<figcaption>Foto do produto em destaque</figcaption>
+					</figure>
+				</li>
+				<li class="produtos__produto">
+					<figure>
+						<img src="img/produto3.png" alt="Foto do Produto 3">
+						<figcaption>Foto do produto 3</figcaption>
+					</figure>
+				</li>
+				<li class="produtos__produto">
+					<figure>
+						<img src="img/produto4.png" alt="Foto do Produto 4">
+						<figcaption>Foto do produto 4</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</section>
+		<!--Existem 2 tipos de display que caracterizam a exibição padrão
+		da maior parte dos elementos HTML: display: block e display: inline-->
+		<p>Um parágrafo que é block</p>
+		<p>Mais um parágrafo que é block</p>
+		<a>Um link que é inline</a>
+		<a>Mais um link que é inline</a>
+		<!--display: block
+		.Um elemento block ocupa toda a largura disponível 
+		.Se diminuir o tamanho desse elemento o espaço restante será ocupado
+		por uma margin não removível 
+		
+		display: inline
+		.Um elemento inline ocupa só o espaço necessário para mostrar o texto
+		.Permite que outro elemento fique do seu lado caso haja espaço
+		.Não recebe propriedades de tamanho
+		
+		display: inline-block
+		.Permite que outro elemento fique do seu lado caso haja espaço
+		.O elemento inicialmente ocupa apenas o espaço para mostrar seu conteúdo
+		.Recebe propriedades de tamanho -->
+	</body>
+</html>

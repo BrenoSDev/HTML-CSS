@@ -1,0 +1,12 @@
+/*Para estilizar o formato padrão das listas ordenadas e não-ordenadas,
+podemos utilizar a propriedade list-style-type no CSS */
+ul {
+	list-style-type: circle; /*Alterar para círculo antes de cada <li>
+	da lista não-ordenada */
+}
+ol {
+	list-style-type: upper-alpha; /*Alterar para uma sequência alfabética
+	antes de cada <li> da lista ordenada */
+}
+/*Também pode-se usar a shorthand property 
+list-style: circle */

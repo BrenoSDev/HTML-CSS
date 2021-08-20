@@ -1,0 +1,55 @@
+Estilizando o header da home
+
+Quando não especificamos nenhum estilo para nossos elementos do HTML, o
+navegador utiliza uma série de estilos padrão, que são diferentes em 
+cada um dos navegadores.
+Para evitar esse tipo de interferência, alguns desenvolvedores e empresas
+criaram alguns estilos que chamamos de CSS Reset. A intenção é definir um
+valor básioo para todas as características do CSS, sobrescrevendo 
+totalmente os estilos padrão do navegador.
+
+Existem algumas opções para resetar os valores do CSS:
+*HTML5 Boilerplate - é um projeto que pretende fornecer um excelente ponto
+de partida para quem pretende desenvolver um novo projeto com HTML5. Uma
+
+série de técnicas para aumentar a compatibilidade da nova tecnologia com
+navegadores um pouco mais antigos estão presentes e o código é totalmente
+gratuito.
+https://html5boilerplate.com/
+
+*YUI3 CSS Reset - esse CSS Reset é composto de 3 arquivos distintos. O
+primeiro deles, chamado de Reset, simplesmente muda todos os valores 
+possíveis para um valor padrão, onde até mesmo as tags <h1> e <small>
+passam a ser exibidas com o mesmo tamanho. O segundo arquivo é chamado
+de Base, onde algumas margens e dimensões dos elementos são padronizadas.
+O terceiro é chamado de Font, onde o tamanho dos tipos é definido para 
+que tenhamos um visual consistente inclusive em diversos dispositivos 
+móveis.
+
+*Eric Meyer CSS Reset - Há também o famoso CSS Reset de Eric Meyer, que 
+pode ser obtido em http://meyerweb.com/eric/tools/css/reset/
+
+Fontes próprias
+Uma maneira super comum de fazer com que o usuário possua a fonte da
+página é usando o Google Fonts. Basta entrar no site https://fonts.google.com/,
+escolher uma tipografia e depois escolher como importar a fonte.
+
+A primeira maneira de se importar a fonte do Google Fonts é usando a tag
+<link> e passar a referência para o Google Fonts.
+
+Modularizando componentes com CSS isolados
+
+*CSS Geral com CSS Específico da Página
+	A abordagem de criar um CSS geral com um CSS específico da página é
+	bem conhecida e muito utilizada no mercado. A ideia é criar um CSS
+	que vai conter estilos que podem se repetir em diversas páginas,
+	como por exemplo, tipografia, cores, tamanhos e até alguns 
+	componentes, e depois criar um CSS que vai conter estilos 
+	específicos daquela página.
+
+*Um CSS para Cada Componente da Página
+	Essa abordagem também é bastante utilizada no mercado só que ela
+	é mais utilizada em projetos com o uso de frameworks (React, Angular)
+	e pré processadores CSS (SASS). Nessa abordagem cada seção ou componente 
+	da página tem um CSS exclusivo.
+	

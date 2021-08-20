@@ -1,0 +1,24 @@
+section h2 { /*É o h2 da section que tem os produtos? E se precisar mudar
+minha estrutura para um h3 */
+	font-size: 40px;
+	font-weight: 800;
+}
+.produtos__titulo { /*Aqui eu sei que vou estilizar o título do painel
+de produtos. Mesmo se mudar para um h3 */
+	font-size: 40px;
+	font-weight: 800;
+}
+
+p {
+	background-color: blue;
+	width: 30%;
+}
+a {
+	background-color: red;
+	width: 60%;
+	/*Diferente de um elemento block, um elemento inline não recebe 
+	propriedades de tamanho (width e height) e isso pode gerar alguns
+	problemas com estilização. Foi criado então o display: inline-block
+	que permite usar o melhor dos dois mundos */
+	display: inline-block;
+}

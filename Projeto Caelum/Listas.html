@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Listas HTML</title>
+		<link rel="stylesheet" href="Listas.css">
+	</head>
+	<body>
+		<!--A lista mais comum é a lista não ordenada definida pela tag
+		<ul> -->
+		<ul>
+			<!-- Para cada item da lista, utilizamos uma marcação de
+			item de lista <li> -->
+			<li>Primeiro item da lista</li>
+			<li>
+				Segundo item da lista
+				<ul>
+					<li>Primeiro item da lista aninhada</li>
+					<li>Segundo item da lista aninhada</li>
+				</ul>
+			</li>
+			<li>Terceiro item da lista</li>
+		</ul>
+		
+		<!--Listas ordenadas são marcadas pela tag <ol> -->
+		<ol>
+			<li>Primeiro item da lista</li>
+			<li>Segundo item da lista</li>
+			<li>Terceiro item da lista</li>
+			<li>Quarto item da lista</li>
+			<li>Quinto item da lista</li>
+			<!--As listas ordenadas <ol> também podem ter sua 
+			estrutura composta por outras listas ordenadas. Também
+			é possível ter listas ordenadas aninhadas em um item de
+			uma lista não ordenada e vice-versa -->
+		</ol>
+		
+		<!-- Existe um terceiro tipo de lista que devemos utilizar para
+		demarcar um glossário, quando listamos termos e seus significados.
+		Essa é a lista de definição marcada pela tag <dl> -->
+		<dl>
+			<!--Os termos são marcados pela tag <dt> e os significados
+			pela tag <dd> -->
+			<dt>HTML</dt>
+			<dd>
+				HTML é a linguagem de marcação de textos utilizada para
+				exibir textos como páginas na internet.
+			</dd>
+			<dt>Navegador</dt>
+			<dd>
+				Navegador é o software que requisita um documento HTML
+				através do protocolo HTTP e exibe seu conteúdo em uma
+				janela.
+			</dd>
+		</dl>
+	</body>
+</html>

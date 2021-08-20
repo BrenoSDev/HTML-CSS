@@ -1,0 +1,41 @@
+p {
+	background-color: red;
+	height: 300px; /*A propriedade height define a altura do elemento */
+	width: 300px; /*A propriedade width define a largura do elemento */
+	
+	/*A propriedade padding é utilizada para definir um espaçamento
+	interno em elementos(a distância entre o limite do elemento, sua 
+	borda e seu respectivo conteúdo e tem as seguintes subpropriedades:
+	padding-top
+	padding-right
+	padding-bottom
+	padding-left */
+	/*Podemos definir todos os valores para as subpropriedades do padding
+	em uma única propriedade: o padding */
+	
+	padding: 10px; /*Se passado somente um valor ele é aplicado em todas
+	as direções*/
+	
+	/*Se passados dois valores, o primeiro será aplicado acima e abaixo
+	e o segundo será aplicado à direita e à esquerda */
+	/*Se passados três valores, o primeiro será aplicado acima, o segundo
+	será aplicado à direita e à esquerda e o terceiro valor será aplicado
+	abaixo do elemento*/
+	/*Se passados quatro valores, serão aplicados respectivamente a
+	padding-top, padding-right, padding-bottom e padding-left*/
+}
+h1 {
+	padding: 10px 25px 10px 15px;
+	
+	/*A propriedade margin adiciona espaço após o limite do elemento, ou
+	seja, espaçamento ecterno
+	margin-top
+	margin-right
+	margin-bottom
+	margin-left */
+	
+	/*Há ainda uma maneira de permitir que o navegador defina qual será a 
+	dimensão da propriedade padding ou margin conforme o espaço disponível 
+	na tela: definimos o valor auto para os espaçamentos que quisermos. */
+	margin: 0 auto;
+}

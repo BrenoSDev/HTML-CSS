@@ -1,0 +1,66 @@
+/*img {
+	width: 300px; Aplica o atributo para todas as tags <img>
+} */
+
+figure img {
+	width: 300px; /*Aplica o atributo apenas às imagens que são filhas
+	de uma tag <figure> */
+}
+
+/*Outra forma de selecionar elementos mais específicos é usando o atributo
+id="" nos elementos que queremos estilizar e depois fazer a chamada de
+seletor de id */
+#matriz-musicdot {
+	width: 300px;
+}
+#familia-tupfeln {
+	width: 300px;
+}
+
+/*Não é recomendado o uso de id para estilização de elementos já que a
+ideia do atributo é para fazer uma referência única na página */
+
+/*Quando queremos estilizar elementos específicos é melhor utilizar o
+atributo class="". O comportamento no CSS será idêntico ao do atributo
+id="", mas class foi feito para ser usado no CSS e no JavaScript */
+.matriz-musicdot {
+	width: 300px;
+}
+.familia-tupfeln {
+	width: 300px;
+}
+
+/*Grau de especifidade de um seletor: 
+Ao criarmos um seletor de tag a sua pontuação se torna 1
+Quando usamos um seletor de classe sua pontuação se torna 10
+Quando usamos um seletor de id sua pontuação se torna 100
+
+Ao fim, o navegador soma a pontuação dos seletores aplicados à um
+elemento, e as propriedades com o seletor de maior pontuação são 
+as que valem */
+p { /*Pontuação 1 */
+	color: blue;
+}
+.paragrafo { /*Pontuação 10 */
+	color: red;
+}
+#paragrafo-rosa { /*Pontuação 100 */
+	color: pink;
+}
+
+/*Quando elementos possuem a mesma pontuação quem prevalece é a 
+propriedade do último seletor */
+p { /*Pontuação 1 */
+	background-color:blue;
+}
+p { /*Pontuação 1 */
+	background-color: red;
+}
+
+/*Podemos também somar os pontos para deixar nosso seletor mais forte */
+body p { /*Seletor de tag + outro seletor de tag = 2 pontos */
+	background-color: brown;
+}
+p { /*Pontuação 1 */
+	background-color: blue;
+}

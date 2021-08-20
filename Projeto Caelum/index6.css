@@ -1,0 +1,43 @@
+body {
+	font-family: "Helvetica", "Lucida Grande", sans-serif;
+	border-color: red; /*Cor da borda*/
+	border-style: solid; /*Efeito da borda */
+	border-width: 1px; /*Largura da borda */
+	border: 1px solid red; /*Forma resumida do border */
+	
+	/*Pode-se também falar em qual dos lados do elemento queremos 
+	a borda usando uma subpropriedade:
+	border-top: 1px solid red; Borda de cima
+	border-right: 1px solid red; Borda da direita
+	border-bottom: 1px solid red; Borda de baixo
+	border-left: 1px solid red; Borda da esquerda */
+}
+p {
+	color: blue;
+	background-color: yellow;
+}
+h1 {
+	font-family: serif; /*A propriedade font-family define a fonte do
+	texto e pode receber seu valor com ou sem aspas dependendo da sua
+	composição */
+	background-image: url(img/home-background.png); /*A propriedade
+	background-image permite indicar um arquivo de imagem para ser
+	exibido ao fundo do elemento */
+}
+h2 {
+	font-family: sans-serif;
+}
+p {
+	font-family: monospace;
+	font-style: italic; /*A propriedade font-style define o estilo da 
+	fonte, podendo ser normal(texto na vertical), italic(inclinada), e
+	oblique(oblíqua) */
+	text-align: right; /*Define o alinhamento do texto, que pode ser:
+	right(direita), center(centro), justify(define que o texto deve ocupar
+	toda a largura do elemento), left(esquerda) */
+	
+	line-height:3px; /*Define o tamanho da altura de cada linha */
+	letter-spacing: 3px; /*Define o tamanho do espaço entre cada letra*/
+	word-spacing: 5px; /*Define o tamanho do espaço entre cada palavra*/
+	text-indent: 30px; /*Define o tamanho da margem da primeira linha do texto */
+}

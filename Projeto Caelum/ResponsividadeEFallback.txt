@@ -1,0 +1,17 @@
+Responsividade e FallBack
+
+Vamos acabar encontrando casos de incompatibilidade de propriedades CSS
+com os browsers que usamos. 
+O site caniuse.com mostra um gráfico falando sobre compatibilidade de 
+propriedades CSS com diversas versões de browsers, e a idéia de usar esse
+site é por conta das métricas que ele nos apresenta.
+
+A maneira mais ideal de manter compatibilidade com browsers mais antigos é
+seguindo o conceito de Progressive Enhancement, começamos a colocar nossas 
+propriedades baseadas nos navegadores mais antigos e depois vamos crescendo
+para propriedades mais novas de navegadores mais novos, assim naturalmente
+vamos deixando nosso site responsivo e compatível com diversos navegadores.
+
+É importante ver que na hora de decidir qual propriedade antiga usar como 
+"piso" da progressão, essa propriedade faça sentido para a época que o site
+for criado.

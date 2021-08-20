@@ -1,0 +1,16 @@
+/*h2 {
+	font-size: 24px;
+	font-weight: bold;
+	border-bottom: 1px solid #000000;
+} */
+
+/*O ideal é declarar estilos com classes ao invés de nomes de tags. Uma
+dica para dar nome às classes é elas representarem o papel que essas tags
+estão exercendo em conjunto com os estilos declarados */
+.subtitulo {
+	font-size: 24px;
+	font-weight: bold;
+	border-bottom: 1px solid #000000;
+}
+/*Usando classes, podemos alterar toda a estrutura HTML sem nos preocupar
+se estas alterações afetarão a estilização que fizemos no começo */

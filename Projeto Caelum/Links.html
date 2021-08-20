@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Links</title>
+	</head>
+	<body>
+		<!--Quando precisamos indicar que um trecho de texto se refere
+		a um outro conteúdo, seja ele no mesmo documento ou em outro
+		endereço(por exemplo uma página da web), utilizamos a tag de
+		âncora <a> -->
+		<p>
+			Visite o site da <a href="https://www.caelum.com.br">
+			Caelum</a>
+			<!--Além do atributo href, podemos adicionar o atributo
+			target="" para especificar onde que essa página irá carregar.
+			Por padrão a página irá abrir na mesma aba da página que tem
+			o link, mas se quisermos que a página abra em outra aba podemos
+			colocar o valor _blank dentro desse atributo -->
+		</p>
+		
+		<!--Outro uso para a tag de âncora é a demarcação de destinos para
+		links dentro do próprio documento -->
+		<p>Mais informações <a href="#info">aqui</a>.</p>
+		<p>Conteúdo da página...</p>
+		<h2 id="info">Mais informações sobre o assunto:</h2>
+		<!--O elemento da página que contém o atributo id é chamado 
+		de bookmark -->
+		<p>Informações...</p>
+		
+		<!--É possível, com o uso de um link, levar o usuário a 
+		um bookmark presente em outra página -->
+		<a href="http://www.caelum.com.br/curso/wd43/#contato">
+			Entre em contato sobre o curso
+		</a>
+		
+		<!--O outro uso para a tag de âncora é a demarcação de destinos
+		para links dentro do próprio site, mas não na mesma página que
+		estamos. -->
+		<p>Acesse <a href="index1.html">nossa loja</a>.</p>
+		
+	</body>
+</html>

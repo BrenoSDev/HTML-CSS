@@ -1,0 +1,24 @@
+h1 {
+	/*A maneira mais simples de se definir uma cor é escrevendo o 
+	nome dela */
+	color: red; /*A propriedade color define a cor do texto*/
+}
+h2 {
+	background-color: yellow; /*A propriedade background-color define
+	a cor de fundo */
+}
+/*Outra maneira de definir a cor é usando o RGB, que é o sistema de cor 
+usado nos monitores, já que cada píxel nos monitores possuem 3 leds(um
+vermelho, um verde e um azul). Podemos escolher a intensidade de cada 
+um desses três leds básicos, numa escala de 0 a 255 */
+h3 {
+	color: rgb(255, 200, 0);
+/* A forma mais comum de definir cores é a notação hexadecimal.
+Essa sintaxe tem suporte universal nos navegadores e é mais curta
+de escrever, apesar de ser mais enigmática. */
+	background-color: #f2eded;
+}
+/*Na base hexadecimal, os algarismos vão de zero a quinze. Para 
+representar os algarismos de dez a quinze, usamos letras de A a F.
+Nessa sintaxe, portanto, podemos utilizar números de 0-9 e letras
+de A-F

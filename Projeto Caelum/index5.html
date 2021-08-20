@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<title>Estilizando com CSS</title>
+		<!--A sintaxe do CSS é uma declaração de propriedades e valores
+		separados por um sinal de dois pontos(:), e cada propriedade é 
+		separada por um sinal de ponto e vírgula(;):
+		color:blue;
+		background-color:yellow;
+		-->
+		<!--Outra maneira de se utilizar CSS é declarando suas propriedades
+		dentro de uma tag <style> -->
+		<style>
+			/*Estrutura do CSS:	
+			seletor {
+				propriedade:valor;
+			} */
+			p {
+				color:blue;
+				background-color: yellow;
+			}
+			
+			/* Algumas propriedades contém subpropriedades que modificam
+			uma parte específica daquela propriedade: 
+			seletor {
+				propriedade-subpropriedade: valor;
+			} */
+			p {
+				text-align:center; /*Alinhamento do texto */
+				text-decoration: underline; /*Efeito do texto */
+			}
+		</style>
+		
+		
+	</head>
+	<body>
+		<h1><font color="red">MusicDot anos 90</font></h1>
+		<!--O parâmetro color da tag <font> define a cor do texto-->
+		<!--Antes do CSS, a estilização era feita no próprio HTML-->
+		
+		<p style="color:blue; background-color:yellow;">
+		O conteúdo desta tag será exibido em azul com fundo amarelo no
+		navegador!
+		</p>
+		<!--Uma das formas de se adicionar CSS é com o atributo style
+		no próprio elemento-->
+		
+		<p>
+			<strong>Também</strong> será exibido em azul com fundo
+			amarelo!
+		</p>
+	</body>

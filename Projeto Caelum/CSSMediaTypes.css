@@ -1,0 +1,72 @@
+/*Outra forma de declarar os media types é separar as regras 
+dentro do próprio arquivo CSS*/
+@media screen {
+	body {
+		background-color: blue;
+		color:white;
+	}
+}
+
+@media print {
+	body {
+		background-color: white;
+		color: black;
+	}
+}
+
+/*O media type screen determina a visualização normal, na
+tela do Desktop. É muito comum também termos um CSS com
+media type print com regras de impressão(por exemplo,
+retirar navegação, formatar cores para serem mais adequadas
+para leitura em papel etc). */
+
+/*E havia também o media type handheld, voltado para 
+dispositivos móveis. Com ele, conseguíamos adaptar o 
+site para os pequenos dispositivos como celulares WAP e
+palmtops. O problema é que esse tipo handheld nasceu
+em uma época em que os celulares eram bem mais simples
+do que hoje, e, portanto, costumavam ser usados para fazer 
+páginas bem mais simples*/
+
+
+/*CSS3 Media Queries*/
+/*Em vez de falar que determinado CSS é para handheld em
+geral, nós podemos agora indicar que determinadas regras
+do CSS devem ser vinculadas a propriedades do dispositivo
+como tamanho da tela, orientação (landscape ou portrait)
+e até resultado em dpi */
+@media screen {
+	body {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 12px;
+	}
+}
+
+/*Viewport*/
+/*Os smartphones sabem que considerar a tela como 4K não 
+ajudará o usuário a visualizar a página otimizada para 
+telas menores. Há então o conceito de device-width que,
+resumidamente, representa um número de pixels que o 
+fabricante do aparelho considera como mais próximo da 
+sensação que o usuário tem ao visualizar a tela */
+
+/*Pequenas mudanças que fazemos usando @media tentando 
+fazer a experiência do usuário em diversos dispositivos
+mais atraente é o que o mercado chama de Web Designer 
+Responsivo */
+/*São 3 os elementos de um dersign responsivo:
+*Layout fluido usando medidas flexíveis, como porcentagens;
+*media queries para ajustes de design;
+*uso de imagens flexiveis. */
+
+/*É muito mais comum e recomendado o uso da prática do
+Mobile-first. Isto é, começar o desenvolvimento pelo 
+mobile e, depois, adicionar suporte a layouts desktop.
+No código, não há nenhum segredo: vamos apenas usar mais
+media queries min-width ao invés de max-width, mais comum
+em códigos de desktop-first */

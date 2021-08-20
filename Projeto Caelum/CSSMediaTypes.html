@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Media types</title>
+		<!--CSS Media types são arquivos que ajustam
+		o layout de acordo com o dispositivo-->
+		<link rel="stylesheet" href="site.css" media="screen">
+		<link rel="stylesheet" href="print.css" media="print">
+		<link rel="stylesheet" href="handheld.css" media="handeld">
+		
+		<link rel="stylesheet" href="mobile.css" media="(max-width: 480px)">
+		
+		<!--Por padrão, iphones, Androids e afins costumam 
+		considerar o tamanho da tela visível, chamada de 
+		viewport como grande o suficiente para comportar 
+		os sites Desktop normais. A apple criou então uma 
+		solução que depois foi copiada pelos outros 
+		smartphones, que é configurar o valor que julgamos
+		mais adequado para o viewport: -->
+		
+		<meta name="viewport" content="width=370">
+		
+		<!--Melhor ainda, podemos colocar o viewport com o
+		valor device-width definido pelo fabricante, dando
+		mais flexibilidade com dispositivos diferentes com
+		tamanhos diferentes: -->
+		
+		<meta name="viewport" content="width=device-width">
+		
+		
+	</head>
+	<body>
+	</body>
+</html>

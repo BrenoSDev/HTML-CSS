@@ -1,0 +1,41 @@
+Display: Grid
+
+Mais uma propriedade de poaicionamento de elementos! A propriedade
+display: flex já nos proporcionou grandes vantagens em relação às maneiras 
+que costumávamos manipular posicionamento de elementos, só que encontramos
+uma certa complicação quando precisamos posicionar elementos de forma 
+bidimensional. Flex é uma ótima ferramenta para quando temos elementos que
+precisam ser distribuídos de maneira igual e com uma direção bem definida
+
+A idéia do grid é exatamente de não precisar mudar a estrutura do HTML, e 
+que toda a parte de posicionamento de layout fique apenas no CSS.
+Quando colocamos a propriedade display: grid em um elemento ele se transforma
+em um grid container da mesma forma que um elemento se torna flex container
+quando recebe a propriedade display: flex. Depois que definimos um grid 
+container precisamos definir sua estrutura. Por padrão, um grid container
+coloca cada item em uma linha e todos eles ficam em uma coluna
+
+As propriedades de grid container que vão definir o número de colunas e o
+número de linhas são respectivamente: grid-template-columns: e 
+grid-template-rows. A propriedade de grid permite que nós usemos outra 
+unidade de medida: fr (que significa fraction/fração).
+
+Grid-Template-Columns
+	Podemos colocar infinitos valores dentro dessa propriedade, mas cada 
+	valor dentro dessa propriedade vai representar uma coluna.
+
+Grid-Template-Rows
+	A propriedade que cria as linhas funciona da mesma maneira que a 
+	propriedade que cria colunas.
+	
+A propriedade grid-row é usada apenas nos elementos filhos de um grid 
+container e ela recebe dois valores: linha de início e linha de término.
+No nosso exemplo usamos o valor span que diz que queremos mesclar linhas
+e o 2 a quantidade de linhas ou colunas que vamos mesclar. Quando não colocamos o
+valor de término o navegador coloca automaticamente span 1 que quer dizer
+"ocupe apenas 1 linha/coluna".
+
+Para melhorar essa capacidade de movimentação de elementos dentro do grid, 
+foi criado uma propriedade chamada grid-template-areas, que nomeia cada
+espaço do grid criado. Não podemos deixar espaços vazios que o browser não 
+vai entender, precisamos deixar alguma coisa para indicar o espaço do grid

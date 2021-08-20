@@ -1,0 +1,19 @@
+/*Importando fontes usando @import*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Outra maneira de importar fonte sem depender de serviços externos é 
+importar o próprio arquivo de fonte no arquivo CSS que essa fonte será
+utilizada usando o @font-face */
+
+@font-face {
+	font-family: minhaFonte;
+	src: url(fonts/minha-font-customizada.woff);
+}
+
+body {
+	font-family: 'minhaFonte', sans-serif;
+}
